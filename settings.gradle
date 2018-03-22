@@ -1,0 +1,10 @@
+rootProject.name = 'dashj-parent'
+include ':dashj-core'
+include ':dashj-examples'
+include ':dashj-tools'
+include ':wallettemplate'
+
+project(':dashj-core').projectDir = "$rootDir/core" as File
+project(':dashj-examples').projectDir = "$rootDir/examples" as File
+project(':dashj-tools').projectDir = "$rootDir/tools" as File
+project(':wallettemplate').projectDir = "$rootDir/wallettemplate" as File

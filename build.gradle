@@ -1,0 +1,32 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'org.dashj'
+version = '0.14.4.3'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+  tasks.withType(JavaCompile) {
+  	options.encoding = 'UTF-8'
+  }
+
+  
+  repositories {
+    mavenLocal()
+    
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+  configurations.all {
+}
+  dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.20'
+    runtime group: 'org.slf4j', name: 'slf4j-jdk14', version:'1.7.20'
+}
+
+  
+}
