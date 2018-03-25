@@ -1994,7 +1994,7 @@ public class Wallet extends BaseTaggableObject
             // Mark the tx as appearing in this block so we can find it later after a re-org. This also tells the tx
             // confidence object about the block and sets its depth appropriately.
             tx.setBlockAppearance(block, bestChain, relativityOffset);
-            //added for Dash
+            //added for $PAC
             if(context.instantSend != null) //Check for unit tests
                 context.instantSend.syncTransaction(tx, block);
             if (bestChain) {
@@ -2509,7 +2509,7 @@ public class Wallet extends BaseTaggableObject
 
             isConsistentOrThrow();
 
-            //Dash Specific
+            //$PAC Specific
             if(tx.getConfidence().isIX() && tx.getConfidence().getSource() == Source.SELF) {
                 context.instantSend.processTxLockRequest((TransactionLockRequest)tx);
             }
@@ -4891,7 +4891,7 @@ public class Wallet extends BaseTaggableObject
             if (needAtLeastReferenceFee && fees.compareTo(dip0001Active ? Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.div(10) : Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
                 fees = dip0001Active ? Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.div(10) : Transaction.REFERENCE_DEFAULT_MIN_TX_FEE;
 
-            //Dash instantSend
+            //$PAC instantSend
             if(req.useInstantSend) {
                 Coin ixFee = dip0001Active ? TransactionLockRequest.MIN_FEE.div(10) : TransactionLockRequest.MIN_FEE;
                 fees = Coin.valueOf(max(ixFee.getValue(), ixFee.multiply(lastCalculatedInputs).getValue()));
@@ -5132,7 +5132,7 @@ public class Wallet extends BaseTaggableObject
                 continue;
 
             }
-            //Dash Specific
+            //$PAC Specific
             if(tx.getConfidence().isIX() && tx.getConfidence().getSource() == Source.SELF) {
                 //This transaction was stuck and we need to track it once again with InstantSend
                 context.instantSend.processTxLockRequest((TransactionLockRequest)tx);

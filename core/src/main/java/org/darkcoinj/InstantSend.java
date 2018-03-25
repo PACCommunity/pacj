@@ -231,7 +231,7 @@ public class InstantSend {
         if (!canProcessInstantXMessages() && pfrom.getPeerVersionMessage().clientVersion < MIN_INSTANTSEND_PROTO_VERSION)
             return;
 
-        //Adding to known inventory in Dash Core, we will skip that.
+        //Adding to known inventory in $PAC Core, we will skip that.
 
         try {
             lock.lock();

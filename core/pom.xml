@@ -20,15 +20,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.dashj</groupId>
-        <artifactId>dashj-parent</artifactId>
+        <groupId>org.pacj</groupId>
+        <artifactId>pacj-parent</artifactId>
         <version>0.14.4.3</version>
     </parent>
 
-    <artifactId>dashj-core</artifactId>
+    <artifactId>pacj-core</artifactId>
 
-    <name>dashj</name>
-    <description>A Java Dash library</description>
+    <name>pacj</name>
+    <description>A Java $PAC library</description>
 
     <packaging>jar</packaging>
 
@@ -353,7 +353,7 @@
             <version>3.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- dashj consumers are expected to provide their own SLF4J adapters
+        <!-- pacj consumers are expected to provide their own SLF4J adapters
              such as logback, slf4j-log4j12, slf4j-jcl and so on
              see http://www.slf4j.org/faq.html -->
         <dependency>

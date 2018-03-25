@@ -73,12 +73,9 @@ public class CoinDefinition {
 
     public static final long DEFAULT_MIN_TX_FEE = 10000;   // MIN_TX_FEE
     public static final long DUST_LIMIT = 5460; //Transaction.h CTransaction::GetDustThreshold for 10000 MIN_TX_FEE
-    public static final long INSTANTX_FEE = 100000; //0.001 DASH (updated for 12.1)
+    public static final long INSTANTX_FEE = 100000; //0.001 $PAC (updated for 12.1)
     public static final boolean feeCanBeRaised = false;
 
-    //
-    // Dash 0.12.1.x
-    //
     public static final int PROTOCOL_VERSION = 70212;          //version.h PROTOCOL_VERSION
     public static final int MIN_PROTOCOL_VERSION = 70212;        //version.h MIN_PROTO_VERSION
 
@@ -123,7 +120,7 @@ public class CoinDefinition {
     public static int minBroadcastConnections = 0;   //0 for default; Using 3 like BreadWallet.
 
     //
-    // TestNet - DASH
+    // TestNet - $PAC
     //
     public static final boolean supportsTestNet = true;
     public static final int testnetAddressHeader = 140;             //base58.h CBitcoinAddress::PUBKEY_ADDRESS_TEST

@@ -55,7 +55,7 @@ public class Context {
     private boolean ensureMinRequiredFee = true;
     private Coin feePerKb = Transaction.DEFAULT_TX_FEE;
 
-    //Dash Specific
+    //$PAC Specific
     private boolean liteMode = true;
     private boolean allowInstantX = true; //allow InstantX in litemode
     public PeerGroup peerGroup;
@@ -200,14 +200,14 @@ public class Context {
     }
 
     //
-    // Dash Specific
+    // $PAC Specific
     //
-    private boolean initializedDash = false;
-    public void initDash(boolean liteMode, boolean allowInstantX) {
+    private boolean initializedPac = false;
+    public void initPac(boolean liteMode, boolean allowInstantX) {
         this.liteMode = true;//liteMode; --TODO: currently only lite mode has been tested and works with 12.1
         this.allowInstantX = allowInstantX;
 
-        //Dash Specific
+        //$PAC Specific
         sporkManager = new SporkManager(this);
 
         masternodePayments = new MasternodePayments(this);
@@ -216,11 +216,11 @@ public class Context {
         darkSendPool = new DarkSendPool(this);
         instantSend = new InstantSend(this);
         masternodeManager = new MasternodeManager(this);
-        initializedDash = true;
+        initializedPac = true;
     }
 
-    public void closeDash() {
-        //Dash Specific
+    public void closePac() {
+        //$PAC Specific
         sporkManager = null;
 
         masternodePayments = null;
@@ -230,10 +230,10 @@ public class Context {
         darkSendPool = null;
         instantSend = null;
         masternodeManager = null;
-        initializedDash = false;
+        initializedPac = false;
     }
 
-    public void initDashSync(String directory)
+    public void initPacSync(String directory)
     {
         //masternodeDB = new MasternodeDB(directory);
 
@@ -261,7 +261,7 @@ public class Context {
         this.blockChain = chain;
         hashStore = new HashStore(chain.getBlockStore());
         chain.addListener(updateHeadListener);
-        if(initializedDash) {
+        if(initializedPac) {
             sporkManager.setBlockChain(chain);
             masternodeManager.setBlockChain(chain);
             masternodeSync.setBlockChain(chain);
@@ -336,7 +336,7 @@ public class Context {
     public void updatedChainHead(StoredBlock chainHead)
     {
         params.setDIPActiveAtTip(chainHead.getHeight() >= params.getDIP0001BlockHeight());
-        if(initializedDash) {
+        if(initializedPac) {
             instantSend.updatedChainHead(chainHead);
 
         /*

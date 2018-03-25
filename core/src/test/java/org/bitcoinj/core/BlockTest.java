@@ -57,7 +57,7 @@ public class BlockTest {
     @Test
     public void testWork() throws Exception {
         BigInteger work = PARAMS.getGenesisBlock().getWork();
-        // This number is printed by Dash Core at startup as the calculated value of chainWork on testnet:
+        // This number is printed by $PAC Core at startup as the calculated value of chainWork on testnet:
         //
         // 2017-04-22 19:20:20 UpdateTip: new best=00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c  height=0  log2_work=20.000022  tx=1  date=2014-01-25 16:10:06 progress=0.000002
         // log base 2 of 1048592 is 20.000022

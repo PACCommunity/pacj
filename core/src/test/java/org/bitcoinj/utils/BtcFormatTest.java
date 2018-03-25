@@ -242,7 +242,7 @@ public class BtcFormatTest {
 
         char c;
         i = BtcFormat.getCodeInstance(Locale.US).formatToCharacterIterator(new BigDecimal("0.19246362747414458"));
-        // formatted as "µDASH 192,463.63"
+        // formatted as "µ$PAC 192,463.63"
         assertEquals(0, i.getBeginIndex());
         assertEquals(16, i.getEndIndex());
         int n = 0;

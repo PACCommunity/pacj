@@ -91,7 +91,7 @@ public class PeerGroup implements TransactionBroadcaster {
 
     protected final ReentrantLock lock = Threading.lock("peergroup");
 
-    public ReentrantLock getLock() { return lock; }  //for dash
+    public ReentrantLock getLock() { return lock; }  //for $PAC
 
     protected final NetworkParameters params;
     @Nullable protected final AbstractBlockChain chain;
@@ -440,7 +440,7 @@ public class PeerGroup implements TransactionBroadcaster {
         runningBroadcasts = Collections.synchronizedSet(new HashSet<TransactionBroadcast>());
         bloomFilterMerger = new FilterMerger(DEFAULT_BLOOM_FILTER_FP_RATE);
 
-        //DashSpecific
+        //$PAC Specific
 
 
 

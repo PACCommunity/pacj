@@ -525,7 +525,7 @@ public class TransactionConfidence {
         return hash;
     }
 
-    //Dash Specific Additions
+    //$PAC Specific Additions
     public enum IXType {
         IX_NONE,
         IX_REQUEST,

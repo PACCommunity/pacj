@@ -72,7 +72,7 @@ public class BitcoinSerializer extends MessageSerializer {
         names.put(GetUTXOsMessage.class, "getutxos");
         names.put(UTXOsMessage.class, "utxos");
 
-        //Dash specific messages
+        //$PAC specific messages
         names.put(DarkSendElectionEntryPingMessage.class, "dseep");
 
         names.put(TransactionLockRequest.class, "ix");

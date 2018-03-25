@@ -93,7 +93,7 @@ public class BlockChainTest {
         chain = new BlockChain(PARAMS, wallet, blockStore);
 
         coinbaseTo = wallet.currentReceiveKey().toAddress(PARAMS);
-        Context.get().initDash(false, true);
+        Context.get().initPac(false, true);
     }
 
     @Test

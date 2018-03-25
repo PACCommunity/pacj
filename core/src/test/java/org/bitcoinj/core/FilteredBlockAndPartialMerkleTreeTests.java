@@ -47,7 +47,7 @@ public class FilteredBlockAndPartialMerkleTreeTests extends TestWithPeerGroup {
     @Before
     public void setUp() throws Exception {
         context = new Context(PARAMS);
-        context.initDash(false, true);
+        context.initPac(false, true);
         MemoryBlockStore store = new MemoryBlockStore(PARAMS);
 
         // Cheat and place the previous block (block 100000) at the head of the block store without supporting blocks

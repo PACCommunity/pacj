@@ -30,8 +30,8 @@ public class InventoryItem {
         Transaction,
         Block,
         FilteredBlock,
-        TransactionLockRequest, //Dash InstantSend
-        TransactionLockVote,         //Dash InstantSend
+        TransactionLockRequest, //$PAC InstantSend
+        TransactionLockVote,         //$PAC InstantSend
         Spork,
         MasterNodeWinner,
         MasterNodeScanningError, // not implemented

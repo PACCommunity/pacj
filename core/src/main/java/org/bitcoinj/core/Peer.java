@@ -820,7 +820,7 @@ public class Peer extends PeerSocketHandler {
             TransactionConfidence confidence = tx.getConfidence();
             confidence.setSource(TransactionConfidence.Source.NETWORK);
 
-            //Dash Specific
+            //$PAC Specific
             if(context != null && context.instantSend != null) // for unit tests that are not initialized.
                 context.instantSend.syncTransaction(tx, null);
 
@@ -1231,7 +1231,7 @@ public class Peer extends PeerSocketHandler {
         }
     }
 
-    //added for dash
+    //added for $PAC
     boolean alreadyHave(InventoryItem inv)
     {
         switch (inv.type)
@@ -2091,7 +2091,7 @@ public class Peer extends PeerSocketHandler {
         vDownloadTxDependencyDepth = depth;
     }
 
-    //Dash Specific Code
+    //$PAC Specific Code
     public void notifyLock(Transaction tx)
     {
         for(Wallet wallet : wallets)

@@ -52,7 +52,7 @@ public class TestWithWallet {
         myAddress = myKey.toAddress(PARAMS);
         blockStore = new MemoryBlockStore(PARAMS);
         chain = new BlockChain(PARAMS, wallet, blockStore);
-        Context.get().initDash(false, true);
+        Context.get().initPac(false, true);
     }
 
     public void tearDown() throws Exception {

@@ -30,8 +30,8 @@ import org.bitcoinj.store.BlockStoreException;
 import static com.google.common.base.Preconditions.checkState;
 
 /**
- * Parameters for the testnet, a separate public instance of Dash that has relaxed rules suitable for development
- * and testing of applications and new Dash versions.
+ * Parameters for the testnet, a separate public instance of $PAC that has relaxed rules suitable for development
+ * and testing of applications and new $PAC versions.
  */
 public class TestNet3Params extends AbstractBitcoinNetParams {
 

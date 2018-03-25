@@ -265,6 +265,6 @@ public class SendRequest {
         return helper.toString();
     }
 
-    //Dash Specific
+    //$PAC Specific
     public boolean useInstantSend;
 }

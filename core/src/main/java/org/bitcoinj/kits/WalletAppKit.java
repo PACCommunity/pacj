@@ -104,8 +104,8 @@ public class WalletAppKit extends AbstractIdleService {
         this.directory = checkNotNull(directory);
         this.filePrefix = checkNotNull(filePrefix);
 
-        context.initDash(true, true);
-        context.initDashSync(directory.getAbsolutePath());
+        context.initPac(true, true);
+        context.initPacSync(directory.getAbsolutePath());
     }
 
     /** Will only connect to the given addresses. Cannot be called after startup. */

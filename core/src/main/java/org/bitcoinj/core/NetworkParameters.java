@@ -118,7 +118,7 @@ public abstract class NetworkParameters {
 
 
 
-    //Dash Extra Parameters
+    //$PAC Extra Parameters
     protected String strSporkKey;
     String strMasternodePaymentsPubKey;
     String strDarksendPoolDummyAddress;
@@ -571,7 +571,7 @@ public abstract class NetworkParameters {
         }
     }
 
-    //DASH Specific
+    //$PAC Specific
     public boolean isDIP0001ActiveAtTip() { return DIP0001ActiveAtTip; }
     public void setDIPActiveAtTip(boolean active) { DIP0001ActiveAtTip = active; }
     public int getDIP0001BlockHeight() { return DIP0001BlockHeight; }
