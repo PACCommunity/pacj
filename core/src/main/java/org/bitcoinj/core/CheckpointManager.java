@@ -219,40 +219,12 @@ public class CheckpointManager {
      *
      * <p>Note that time is adjusted backwards by a week to account for possible clock drift in the block headers.</p>
      */
-    public static void checkpoint(Context context, BlockStore store, long time)
-            throws IOException, BlockStoreException {
-
-        if(!CoinDefinition.checkpointFileSupport)
-            return;
-
-        checkNotNull(store);
-        checkArgument(!(store instanceof FullPrunedBlockStore), "You cannot use checkpointing with a full store.");
-
-        time -= 86400 * 7;
-
-        checkArgument(time > 0);
-        log.info("Attempting to initialize a new block store with a checkpoint for time {} ({})", time, Utils.dateTimeFormat(time * 1000));
-
-        CheckpointManager manager = new CheckpointManager(context);
-        StoredBlock checkpoint = manager.getCheckpointBefore(time);
-        store.put(checkpoint);
-        store.setChainHead(checkpoint);
-    }
-
-    /**
-     * <p>Convenience method that creates a CheckpointManager, loads the given data, gets the checkpoint for the given
-     * time, then inserts it into the store and sets that to be the chain head. Useful when you have just created
-     * a new store from scratch and want to use configure it all in one go.</p>
-     *
-     * <p>Note that time is adjusted backwards by a week to account for possible clock drift in the block headers.</p>
-     */
-    // public static void checkpoint(NetworkParameters params, InputStream checkpoints, BlockStore store, long time)
+    // public static void checkpoint(Context context, BlockStore store, long time)
     //         throws IOException, BlockStoreException {
 
     //     if(!CoinDefinition.checkpointFileSupport)
     //         return;
 
-    //     checkNotNull(params);
     //     checkNotNull(store);
     //     checkArgument(!(store instanceof FullPrunedBlockStore), "You cannot use checkpointing with a full store.");
 
@@ -261,10 +233,38 @@ public class CheckpointManager {
     //     checkArgument(time > 0);
     //     log.info("Attempting to initialize a new block store with a checkpoint for time {} ({})", time, Utils.dateTimeFormat(time * 1000));
 
-    //     BufferedInputStream stream = new BufferedInputStream(checkpoints);
-    //     CheckpointManager manager = new CheckpointManager(params, stream);
+    //     CheckpointManager manager = new CheckpointManager(context);
     //     StoredBlock checkpoint = manager.getCheckpointBefore(time);
     //     store.put(checkpoint);
     //     store.setChainHead(checkpoint);
     // }
+
+    /**
+     * <p>Convenience method that creates a CheckpointManager, loads the given data, gets the checkpoint for the given
+     * time, then inserts it into the store and sets that to be the chain head. Useful when you have just created
+     * a new store from scratch and want to use configure it all in one go.</p>
+     *
+     * <p>Note that time is adjusted backwards by a week to account for possible clock drift in the block headers.</p>
+     */
+    public static void checkpoint(NetworkParameters params, InputStream checkpoints, BlockStore store, long time)
+            throws IOException, BlockStoreException {
+
+        if(!CoinDefinition.checkpointFileSupport)
+            return;
+
+        checkNotNull(params);
+        checkNotNull(store);
+        checkArgument(!(store instanceof FullPrunedBlockStore), "You cannot use checkpointing with a full store.");
+
+        time -= 86400 * 7;
+
+        checkArgument(time > 0);
+        log.info("Attempting to initialize a new block store with a checkpoint for time {} ({})", time, Utils.dateTimeFormat(time * 1000));
+
+        BufferedInputStream stream = new BufferedInputStream(checkpoints);
+        CheckpointManager manager = new CheckpointManager(params, stream);
+        StoredBlock checkpoint = manager.getCheckpointBefore(time);
+        store.put(checkpoint);
+        store.setChainHead(checkpoint);
+    }
 }
