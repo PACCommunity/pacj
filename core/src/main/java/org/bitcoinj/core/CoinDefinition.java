@@ -35,7 +35,7 @@ public class CoinDefinition {
     };
     public static final UnspentAPIType UnspentAPI = UnspentAPIType.Cryptoid;
 
-    public static final String BLOCKEXPLORER_BASE_URL_PROD = "http://explorer.dash.org/";    //blockr.io
+    public static final String BLOCKEXPLORER_BASE_URL_PROD = "http://usa.pacblockexplorer.com:3002/";    //blockr.io
     public static final String BLOCKEXPLORER_ADDRESS_PATH = "address/";             //blockr.io path
     public static final String BLOCKEXPLORER_TRANSACTION_PATH = "tx/";              //blockr.io path
     public static final String BLOCKEXPLORER_BLOCK_PATH = "block/";                 //blockr.io path
@@ -110,10 +110,8 @@ public class CoinDefinition {
 
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
-            "dnsseed.paccoin.org",
-            "dnsseed.paccoindot.io",
-            "dnsseed.masternode.io",
-            "dnsseed.paccoinpay.io"
+            "dnsseed1.paccoin.io",
+            "dnsseed2.paccoin.io"
     };
 
 
@@ -168,19 +166,13 @@ public class CoinDefinition {
     public static void initCheckpoints(Map<Integer, Sha256Hash> checkpoints)
     {
 
-        checkpoints.put(  1500, Sha256Hash.wrap("000000aaf0300f59f49bc3e970bad15c11f961fe2347accffff19d96ec9778e3"));
-        checkpoints.put(  4991, Sha256Hash.wrap("000000003b01809551952460744d5dbb8fcbd6cbae3c220267bf7fa43f837367"));
-        checkpoints.put(  9918, Sha256Hash.wrap("00000000213e229f332c0ffbe34defdaa9e74de87f2d8d1f01af8d121c3c170b"));
-        checkpoints.put( 16912, Sha256Hash.wrap("00000000075c0d10371d55a60634da70f197548dbbfa4123e12abfcbc5738af9"));
-        checkpoints.put( 23912, Sha256Hash.wrap("0000000000335eac6703f3b1732ec8b2f89c3ba3a7889e5767b090556bb9a276"));
-        checkpoints.put( 35457, Sha256Hash.wrap("0000000000b0ae211be59b048df14820475ad0dd53b9ff83b010f71a77342d9f"));
-        checkpoints.put( 45479, Sha256Hash.wrap("000000000063d411655d590590e16960f15ceea4257122ac430c6fbe39fbf02d"));
-        checkpoints.put( 55895, Sha256Hash.wrap("0000000000ae4c53a43639a4ca027282f69da9c67ba951768a20415b6439a2d7"));
-        checkpoints.put( 68899, Sha256Hash.wrap("0000000000194ab4d3d9eeb1f2f792f21bb39ff767cb547fe977640f969d77b7"));
-        checkpoints.put( 74619, Sha256Hash.wrap("000000000011d28f38f05d01650a502cc3f4d0e793fbc26e2a2ca71f07dc3842"));
-        checkpoints.put( 75095, Sha256Hash.wrap("0000000000193d12f6ad352a9996ee58ef8bdc4946818a5fec5ce99c11b87f0d"));
-        checkpoints.put( 88805, Sha256Hash.wrap("00000000001392f1652e9bf45cd8bc79dc60fe935277cd11538565b4a94fa85f"));
-        checkpoints.put( 90544, Sha256Hash.wrap("000000000001b284b79a44a95215d7e6cf9e22cd4f9b562f2cc796e941e0e411"));
+        checkpoints.put(  100, Sha256Hash.wrap("000005065df82218140bc7c59cfd6913eaa5a88f3255ccc977c546cb0beb9ff0"));
+        checkpoints.put(  12096, Sha256Hash.wrap("0000000000000097702bbbfb8c00bb228dd1e2f95ae448fc504b35a46bfcd4fe"));
+        checkpoints.put(  15000, Sha256Hash.wrap("00000000000001d2b0bbeaabd957dc7a80ea6f8ecc39ec32f60c70391288893b"));
+        checkpoints.put( 20000, Sha256Hash.wrap("000000000000006abf889a12aa85fe3c713f2520e0af1c1adf2ef70df0fb3320"));
+        checkpoints.put( 21822, Sha256Hash.wrap("000000000000002d00501b6de7a9bd92c8cb2e4874a17bc3c817825539203555"));
+        checkpoints.put( 24005, Sha256Hash.wrap("000000000000030cc60b574b820f0651bd5850d8cfc438d8ed10d184d6de53ff"));
+        checkpoints.put( 29239, Sha256Hash.wrap("00000000000001c7cfaf4d57fb28e134a0aaf26ef994c6d8fc499c0141ed6ab2"));
     }
 
     //Unit Test Information

@@ -12,6 +12,8 @@ libs/
 *.wallet
 *.tmp
 *.dat
+*.class
+.gradle
 checkpoints
 core/build/*
 checkpoints-testnet

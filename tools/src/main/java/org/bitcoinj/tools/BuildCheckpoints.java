@@ -117,7 +117,7 @@ public class BuildCheckpoints {
         final PeerGroup peerGroup = new PeerGroup(params, chain);
         System.out.println("Connecting to " + peerAddress + "...");
         peerGroup.addAddress(peerAddress);
-        peerGroup.addAddress(InetAddress.getByName("188.226.228.88"));
+        peerGroup.addAddress(InetAddress.getByName("209.250.251.184"));
         long now = new Date().getTime() / 1000;
         peerGroup.setFastCatchupTimeSecs(now);
 
