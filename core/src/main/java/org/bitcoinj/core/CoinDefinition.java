@@ -105,8 +105,12 @@ public class CoinDefinition {
     static public String genesisMerkleRoot = "f3939e4de05e537431ef32bbebd9bc7c4e701f7205d72016f04686557af58dbf";
     static public int genesisBlockValue = 50;                                                              //main.cpp: LoadBlockIndex
     //taken from the raw data of the block explorer
-    static public String genesisTxInBytes = "04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73";   //"limecoin se convertira en una de las monedas mas segura del mercado, checa nuestros avances"
-    static public String genesisTxOutBytes = "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
+    // static public String genesisTxInBytes = "04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73";   //"limecoin se convertira en una de las monedas mas segura del mercado, checa nuestros avances"
+    // static public String genesisTxOutBytes = "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
+
+    static public String genesisTxInBytes = "04ffff001d01044c57426974636f696e20426c6f636b20233530373230323a2030303030303030303030303030303030303032646366383861643766656365383639346361663735313234626131383165323963653338633736623763333738";   //"limecoin se convertira en una de las monedas mas segura del mercado, checa nuestros avances"
+    static public String genesisTxOutBytes = "0411345e927d2d3abb85541e23b211f5b9019f2b240fb9bd4b1c44234993639293846cfc74154d293a3bf7ba74592f5f358127c0062a621d3b153089d0f5bb84e5";
+
 
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
