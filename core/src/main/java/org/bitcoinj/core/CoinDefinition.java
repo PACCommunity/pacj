@@ -76,8 +76,8 @@ public class CoinDefinition {
     public static final long INSTANTX_FEE = 100000; //0.001 $PAC (updated for 12.1)
     public static final boolean feeCanBeRaised = false;
 
-    public static final int PROTOCOL_VERSION = 70212;          //version.h PROTOCOL_VERSION
-    public static final int MIN_PROTOCOL_VERSION = 70212;        //version.h MIN_PROTO_VERSION
+    public static final int PROTOCOL_VERSION = 70213;          //version.h PROTOCOL_VERSION
+    public static final int MIN_PROTOCOL_VERSION = 70213;        //version.h MIN_PROTO_VERSION
 
     public static final int BLOCK_CURRENTVERSION = 2;   //CBlock::CURRENT_VERSION
     public static final int MAX_BLOCK_SIZE = 1 * 1000 * 1000;
