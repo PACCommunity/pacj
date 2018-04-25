@@ -4,7 +4,7 @@
 
   <groupId>org.pacj</groupId>
   <artifactId>pacj-parent</artifactId>
-  <version>0.14.4.3</version>
+  <version>0.14.4.4</version>
   <packaging>pom</packaging>
 
   <modules>
