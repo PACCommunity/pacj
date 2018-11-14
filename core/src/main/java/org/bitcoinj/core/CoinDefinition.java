@@ -71,13 +71,13 @@ public class CoinDefinition {
     public static final long MAX_COINS = 22000000;                 //main.h:  MAX_MONEY
 
 
-    public static final long DEFAULT_MIN_TX_FEE = 10000;   // MIN_TX_FEE
+    public static final long DEFAULT_MIN_TX_FEE = 5000000000L;   // MIN_TX_FEE
     public static final long DUST_LIMIT = 5460; //Transaction.h CTransaction::GetDustThreshold for 10000 MIN_TX_FEE
-    public static final long INSTANTX_FEE = 100000; //0.001 $PAC (updated for 12.1)
+    public static final long INSTANTX_FEE = 10000000000L; //0.001 $PAC (updated for 12.1)
     public static final boolean feeCanBeRaised = false;
 
-    public static final int PROTOCOL_VERSION = 70213;          //version.h PROTOCOL_VERSION
-    public static final int MIN_PROTOCOL_VERSION = 70213;        //version.h MIN_PROTO_VERSION
+    public static final int PROTOCOL_VERSION = 70214;          //version.h PROTOCOL_VERSION
+    public static final int MIN_PROTOCOL_VERSION = 70214;        //version.h MIN_PROTO_VERSION
 
     public static final int BLOCK_CURRENTVERSION = 2;   //CBlock::CURRENT_VERSION
     public static final int MAX_BLOCK_SIZE = 1 * 1000 * 1000;
@@ -87,7 +87,7 @@ public class CoinDefinition {
 
     public static final int Port    = 7112;       //protocol.h GetDefaultPort(testnet=false)
     public static final int TestPort = 17112;     //protocol.h GetDefaultPort(testnet=true)
- 
+
     //
     //  Production
     //
