@@ -78,6 +78,10 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         checkpoints.put( 24005, Sha256Hash.wrap("000000000000030cc60b574b820f0651bd5850d8cfc438d8ed10d184d6de53ff"));
         checkpoints.put( 29239, Sha256Hash.wrap("00000000000001c7cfaf4d57fb28e134a0aaf26ef994c6d8fc499c0141ed6ab2"));
 
+        checkpoints.put( 50620, Sha256Hash.wrap("0000000000000349685ff23a2344db4d51ae9f169cda23c8a472fb783914b071"));
+        checkpoints.put( 151380, Sha256Hash.wrap("00000000000027377aa412aad9342c61c20973ac1636663b2ef06b3f7549876d"));
+        checkpoints.put( 216000, Sha256Hash.wrap("00000000000038a52e7bafb7fb091ed2989ec8bdd7a550db9925300687805d87"));
+
 /*
 
         dnsSeeds = new String[] {
@@ -89,6 +93,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
                 "bitseed.xf2.org",              // Jeff Garzik
                 "seed.bitcoin.jonasschnelli.ch" // Jonas Schnelli
         };
+
         httpSeeds = new HttpDiscovery.Details[] {
                 // Andreas Schildbach
                 new HttpDiscovery.Details(
@@ -96,6 +101,16 @@ public class MainNetParams extends AbstractBitcoinNetParams {
                         URI.create("http://httpseed.bitcoin.schildbach.de/peers")
                 )
         };                  */
+
+
+        dnsSeeds = new String[] {
+                "dnsseed2.paccoin.io",
+                "dns-seeder-next.paccoin.io",
+                "dns-seeder-foxtrot.paccoin.io"
+        };
+
+
+
 
         addrSeeds = null; /*new int[] {
                 0x1ddb1032, 0x6242ce40, 0x52d6a445, 0x2dd7a445, 0x8a53cd47, 0x73263750, 0xda23c257, 0xecd4ed57,
