@@ -1256,8 +1256,7 @@ public abstract class AbstractBlockChain {
         StoredBlock cursor = blockStore.get(prev.getHash());
 
         int blockstogoback = params.getInterval() - 1;
-        if(storedPrev.getHeight()+1 != params.getInterval())
-            blockstogoback = params.getInterval();
+
 
         for (int i = 0; i < blockstogoback; i++) {
             if (cursor == null) {
